@@ -11,11 +11,11 @@
  * @param {[id: string]} req.params
  * @param {CbServer.Resp} resp
  *
- * @typedef {{prefix: string, entity_id: string, component_id: string, mfe_settings: Record<string, unknown>}} TeardownParams
+ * @typedef {{prefix: string, entity_id: string, component_id: string, mfe_settings: Record<string, unknown>}} setupParams
  */
 
-function {{component_prefix}}_teardown(req, resp) {
+function my123_Prefix_setup(req, resp) {
   const params = req.params;
-  //component teardown behavior here. Undo any setup done in the setup service
+  //component setup behavior here initialize any external databases, bucket sets, etc.
   resp.success('Success');
 }

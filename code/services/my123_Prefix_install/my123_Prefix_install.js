@@ -11,11 +11,12 @@
  * @param {[id: string]} req.params
  * @param {CbServer.Resp} resp
  *
- * @typedef {{prefix: string, entity_id: string, component_id: string, mfe_settings: Record<string, unknown>}} setupParams
+ * @typedef {{prefix: string, entity_id: string, component_id: string, mfe_settings: Record<string, unknown>}} InstallParams
  */
 
-function {{component_prefix}}_setup(req, resp) {
+function my123_Prefix_install(req, resp) {
   const params = req.params;
-  //component setup behavior here initialize any external databases, bucket sets, etc.
+  const mfe_settings = params.mfe_settings;
+  //component install behavior here. Initialize an instance of the component for use
   resp.success('Success');
 }

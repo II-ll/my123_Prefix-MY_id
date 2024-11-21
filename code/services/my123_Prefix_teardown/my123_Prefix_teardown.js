@@ -11,11 +11,11 @@
  * @param {[id: string]} req.params
  * @param {CbServer.Resp} resp
  *
- * @typedef {{prefix: string, entity_id: string, component_id: string, mfe_settings: Record<string, unknown>}} UninstallParams
+ * @typedef {{prefix: string, entity_id: string, component_id: string, mfe_settings: Record<string, unknown>}} TeardownParams
  */
 
-function {{component_prefix}}_uninstall(req, resp) {
+function my123_Prefix_teardown(req, resp) {
   const params = req.params;
-  //component uninstall behavior here, undo any steps done in the install service
+  //component teardown behavior here. Undo any setup done in the setup service
   resp.success('Success');
 }
